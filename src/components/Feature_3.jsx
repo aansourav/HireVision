@@ -34,7 +34,7 @@ const Feature_3 = () => {
                 </button>
             </div>
             <div className="w-1/2 relative">
-                <img src="../../src/assets/feature_3.png" alt="" />
+                <img src="/feature_3.png" alt="" />
             </div>
         </div>
     );

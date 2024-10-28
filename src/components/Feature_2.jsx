@@ -4,7 +4,7 @@ const RealTimeApplicantAnalytics = () => {
     return (
         <div className="flex items-center justify-between p-8 bg-white py-20 max-w-7xl mx-auto">
             <div className="relative w-1/2">
-                <img src="../../src/assets/feature_2.png" alt="" />
+                <img src="/feature_2.png" alt="" />
             </div>
             <div className="w-1/2 pl-8">
                 <div className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm mb-4">
