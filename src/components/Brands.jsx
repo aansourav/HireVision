@@ -56,7 +56,7 @@ export default function Brands() {
 
     return (
         <div className="py-24">
-            <h2 className="text-3xl font-bold text-center mb-20 text-gray-800">
+            <h2 className="text-2xl font-medium text-center mb-20 text-[#68708c] font-beVietnam ">
                 Already chosen by the world leaders
             </h2>
             <div

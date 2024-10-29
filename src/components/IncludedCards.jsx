@@ -1,9 +1,9 @@
 import React from "react";
 import {
     FaBullseye,
-    FaGlobe,
     FaChartLine,
     FaClipboardCheck,
+    FaGlobe,
     FaHandsHelping,
     FaPalette,
 } from "react-icons/fa";
@@ -51,18 +51,14 @@ export default function IncludedCards() {
     return (
         <div className="bg-white py-12">
             <div className="max-w-6xl mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
                     {features.map((feature, index) => (
                         <div key={index} className="text-center space-y-4">
                             <div className="flex items-center justify-center w-16 h-16 bg-blue-500 rounded-full mx-auto">
                                 {feature.icon}
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-900">
-                                {feature.title}
-                            </h3>
-                            <p className="text-gray-500">
-                                {feature.description}
-                            </p>
+                            <h3 className="card-head">{feature.title}</h3>
+                            <p className="card-para">{feature.description}</p>
                         </div>
                     ))}
                 </div>

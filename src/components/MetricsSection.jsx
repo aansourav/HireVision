@@ -10,12 +10,12 @@ export default function MetricsSection() {
     return (
         <div className="max-w-4xl mx-auto px-4 py-16">
             <div className="text-center">
-                <span className="inline-block px-3 py-1 bg-[#f3f7fb] rounded-full">
-                    <span className="text-sm font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                <span className="inline-block px-3 py-1 bg-[#eef1f2] rounded-full my-8">
+                    <span className="text-xs font-beVietnam font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                         METRICS
                     </span>
                 </span>
-                <h2 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
+                <h2 className="mt-2 section-head !text-4xl">
                     Numbers speaking for themselves
                 </h2>
             </div>
@@ -24,15 +24,15 @@ export default function MetricsSection() {
                     <React.Fragment key={index}>
                         {index > 0 && (
                             <div
-                                className="hidden sm:block h-12 w-px bg-gray-200"
+                                className="hidden sm:block h-32 w-px bg-gray-300"
                                 aria-hidden="true"
                             />
                         )}
                         <div className="flex flex-col text-center">
-                            <dt className="text-5xl font-bold text-indigo-600">
+                            <dt className="text-8xl font-normal text-indigo-600 font-beVietnam">
                                 {metric.value}
                             </dt>
-                            <dd className="mt-2 text-sm text-gray-600">
+                            <dd className="mt-2 section-para">
                                 {metric.description}
                             </dd>
                         </div>
