@@ -4,7 +4,7 @@ const Button = ({ isHovered, setIsHovered, text }) => {
             className={`flex items-center justify-center px-5 py-3 text-md font-medium font-beVietnam rounded-lg transition-all duration-300 ease-in-out ${
                 isHovered
                     ? "bg-indigo-600 text-white pr-6"
-                    : "bg-transparent text-white border border-white"
+                    : "bg-indigo-600 text-white pr-6"
             }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

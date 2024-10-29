@@ -1,4 +1,5 @@
 import BlogSection from "../components/BlogSection";
+import Brands from "../components/Brands";
 import FAQAccordion from "../components/FAQAccordion";
 import Feature_1 from "../components/Feature_1";
 import Feature_2 from "../components/Feature_2";
@@ -19,6 +20,7 @@ const Homepage = () => {
             <Navbar />
             <HeroSection />
             <HeroCards />
+            <Brands />
             <HowItWorks />
             <Feature_1 />
             <Feature_2 />

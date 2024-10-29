@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "./Button";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,19 +17,19 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ease-in-out
-        ${
-            isScrolled || isHovered
-                ? "bg-white shadow-md"
-                : "bg-transparent backdrop-blur-sm"
-        }
-      `}
+                ${
+                    isScrolled || isHovered
+                        ? "bg-white/70 backdrop-blur-md shadow-md"
+                        : "bg-transparent"
+                }
+            `}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
-                        <img src="/logo.svg" alt="" />
+                        <img src="/logo.svg" alt="Logo" />
                     </div>
                     <div className="hidden sm:ml-6 sm:flex sm:items-center font-beVietnam">
                         <a
@@ -57,13 +56,6 @@ const Navbar = () => {
                         >
                             Blog
                         </a>
-                    </div>
-                    <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                        <Button
-                            isHovered={isHovered}
-                            setIsHovered={setIsHovered}
-                            text="Duplicate In Framer"
-                        />
                     </div>
                     <div className="-mr-2 flex items-center sm:hidden">
                         <button
