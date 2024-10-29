@@ -6,27 +6,25 @@ const testimonials = [
         quote: "As a fast-growing startup, we needed an efficient way to find skilled professionals from various regions. This AI tool exceeded our expectations.",
         name: "Sarah Johnson, CEO of XYZ Innovations.",
         image: "https://via.placeholder.com/50", // Replace with actual image URL
+        bg: "bg-[#ece5ff]",
     },
     {
         quote: "This tool streamlined our recruitment process and allowed us to focus on what truly matters—growing our business.",
         name: "Michael Lee, Head of Operations at ABC Ltd.",
         image: "https://via.placeholder.com/50", // Replace with actual image URL
+        bg: "bg-[#fbf7b8]",
     },
     {
         quote: "An essential part of our growth strategy. The team loves it, and so do I!",
         name: "Linda Carter, Co-founder of StartUp Labs.",
         image: "https://via.placeholder.com/50", // Replace with actual image URL
-    },
-    {
-        quote: "Finding top talent has never been easier. The AI recommendations are spot on.",
-        name: "David Kim, CTO at Innovate Tech.",
-        image: "https://via.placeholder.com/50", // Replace with actual image URL
+        bg: "bg-[#d9ffd8]",
     },
 ];
 
-function TestimonialCard({ quote, name, image }) {
+function TestimonialCard({ quote, name, image, bg }) {
     return (
-        <div className="w-96 h-72 flex flex-col justify-between p-8 bg-[#FFF9B9] rounded-lg shadow-lg mb-8 overflow-hidden">
+        <div className={`w-[500px] h-[320px] flex flex-col justify-between p-8 rounded-lg ${bg} shadow-lg mb-8 overflow-hidden`}>
             <p className="text-xl font-bold text-[#1949C9] leading-snug mb-4 line-clamp-5">
                 “{quote}”
             </p>
@@ -74,6 +72,7 @@ export default function TestimonialsSection() {
                         quote={testimonial.quote}
                         name={testimonial.name}
                         image={testimonial.image}
+                        bg={testimonial.bg}
                     />
                 ))}
             </div>
