@@ -13,6 +13,7 @@ import IncludedCards from "../components/IncludedCards";
 import LastingImpression from "../components/LastingImpression";
 import MetricsSection from "../components/MetricsSection";
 import Navbar from "../components/Navbar";
+import TestimonialsSection from "../components/Testimonials";
 
 const Homepage = () => {
     return (
@@ -29,6 +30,7 @@ const Homepage = () => {
             <IncludedCards />
             <LastingImpression />
             <MetricsSection />
+            <TestimonialsSection />
             <FAQAccordion />
             <BlogSection />
             <LastingImpression />
