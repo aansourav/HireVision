@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "./Button";
 
 const blogPosts = [
     {
@@ -19,20 +20,15 @@ const blogPosts = [
 ];
 
 const Card = ({ children, className }) => (
-    <div
-        className={`bg-white rounded-lg shadow-md overflow-hidden ${className} px-4`}
-    >
+    <div className={`bg-white rounded-lg overflow-hidden ${className} px-4`}>
         {children}
     </div>
 );
 
 const CardContent = ({ children, className }) => (
-    <div className={`p-4 ${className}`}>{children}</div>
+    <div className={`my-8 ${className}`}>{children}</div>
 );
 
-const CardFooter = ({ children, className }) => (
-    <div className={`p-4 pt-0 ${className}`}>{children}</div>
-);
 
 export default function BlogCards() {
     return (
@@ -43,24 +39,16 @@ export default function BlogCards() {
                         <img
                             src={post.image}
                             alt={post.title}
-                            className="w-full h-48 object-cover"
+                            className="w-full h-48 object-cover rounded-xl"
                         />
                         <CardContent>
-                            <span className="inline-block px-2 py-1 text-xs font-semibold bg-green-100 text-green-800 rounded-full mb-2">
+                            <span className="inline-block px-4 py-1 text-sm font-bold bg-green-200 text-blue-800 rounded-full mb-2">
                                 {post.category}
                             </span>
-                            <h3 className="section-head !text-xl">
+                            <h3 className="section-head !text-2xl mt-4">
                                 {post.title}
                             </h3>
                         </CardContent>
-                        <CardFooter>
-                            <a
-                                href="#"
-                                className="text-blue-600 hover:text-blue-800 font-semibold"
-                            >
-                                Read More
-                            </a>
-                        </CardFooter>
                     </Card>
                 ))}
             </div>

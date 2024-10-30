@@ -3,31 +3,31 @@ import React, { useEffect, useRef } from "react";
 
 const testimonials = [
     {
-        quote: "As a fast-growing startup, we needed an efficient way to find skilled professionals from various regions. This AI tool exceeded our expectations.",
-        name: "Sarah Johnson, CEO of XYZ Innovations.",
-        image: "https://via.placeholder.com/50", // Replace with actual image URL
+        quote: "We struggled to find the right talent globally, but with their automated candidate ranking, we quickly identified top-notch candidates who perfectly fit our requirements.",
+        name: "John Smith, HR Manager at ABC Tech Solutions.",
+        image: "testimonial_1.png", // Replace with actual image URL
         bg: "bg-[#ece5ff]",
     },
     {
-        quote: "This tool streamlined our recruitment process and allowed us to focus on what truly matters—growing our business.",
-        name: "Michael Lee, Head of Operations at ABC Ltd.",
-        image: "https://via.placeholder.com/50", // Replace with actual image URL
+        quote: "As a fast-growing startup, we needed an efficient way to find skilled professionals from various regions. This AI tool exceeded our expectations.",
+        name: "Sarah Johnson, CEO of XYZ Innovations.",
+        image: "testimonial_2.png", // Replace with actual image URL
         bg: "bg-[#fbf7b8]",
     },
     {
-        quote: "An essential part of our growth strategy. The team loves it, and so do I!",
-        name: "Linda Carter, Co-founder of StartUp Labs.",
-        image: "https://via.placeholder.com/50", // Replace with actual image URL
+        quote: "The platform emphasis on diversity and inclusion impressed me, helping us create a more inclusive workforce.",
+        name: "Michael Chen, HR Director at Acme Enterprises.",
+        image: "testimonial_1.png", // Replace with actual image URL
         bg: "bg-[#d9ffd8]",
     },
 ];
 
 function TestimonialCard({ quote, name, image, bg }) {
     return (
-        <div className={`w-[500px] h-[320px] flex flex-col justify-between p-8 rounded-lg ${bg} shadow-lg mb-8 overflow-hidden`}>
-            <p className="text-xl font-bold text-[#1949C9] leading-snug mb-4 line-clamp-5">
-                “{quote}”
-            </p>
+        <div
+            className={`!w-[700px] h-[500px] flex flex-col justify-between p-8 rounded-3xl ${bg} shadow-lg mb-8 overflow-hidden`}
+        >
+            <p className="section-head !text-4xl mb-6 py-4">“{quote}”</p>
             <div className="flex items-center mt-auto">
                 <img
                     src={image}
@@ -35,7 +35,7 @@ function TestimonialCard({ quote, name, image, bg }) {
                     className="w-14 h-14 rounded-full"
                 />
                 <div className="ml-4">
-                    <p className="text-sm font-medium text-[#1949C9]">{name}</p>
+                    <p className="section-head !text-sm">{name}</p>
                 </div>
             </div>
         </div>

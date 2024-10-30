@@ -1,6 +1,6 @@
 import BlogSection from "../components/BlogSection";
 import Brands from "../components/Brands";
-import FAQAccordion from "../components/FAQAccordion";
+import FAQSection from "../components/FAQSection";
 import Feature_1 from "../components/Feature_1";
 import Feature_2 from "../components/Feature_2";
 import Feature_3 from "../components/Feature_3";
@@ -31,7 +31,7 @@ const Homepage = () => {
             <LastingImpression />
             <MetricsSection />
             <TestimonialsSection />
-            <FAQAccordion />
+            <FAQSection />
             <BlogSection />
             <LastingImpression />
             <Footer />
