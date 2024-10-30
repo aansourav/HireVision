@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 
 const Feature_1 = () => {
-    const [isHovered, setIsHovered] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
 
     const textVariants = {
         hidden: { opacity: 0, x: -50 },

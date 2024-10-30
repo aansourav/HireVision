@@ -1,9 +1,9 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Button from "./Button";
-import { motion } from "framer-motion";
 
 const Feature_3 = () => {
-    const [isHovered, setIsHovered] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
 
     const textVariants = {
         hidden: { opacity: 0, x: -50 },

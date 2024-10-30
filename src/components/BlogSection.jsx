@@ -3,7 +3,7 @@ import BlogCards from "./BlogCards";
 import Button from "./Button";
 
 export default function BlogSection() {
-    const [isHovered, setIsHovered] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <>
             <div className="text-center my-12">

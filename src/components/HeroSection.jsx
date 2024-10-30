@@ -2,7 +2,7 @@
 // import { IoMdArrowForward } from "react-icons/io";
 // import Button from "./Button";
 // const HeroSection = () => {
-//     const [isHovered, setIsHovered] = useState(true);
+//     const [isHovered, setIsHovered] = useState(false);
 //     return (
 //         <div className="relative min-h-screen flex items-center justify-center overflow-hidden mb-36">
 //             {/* Custom gradient background */}
@@ -81,7 +81,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import Button from "./Button";
 
 const HeroSection = () => {
-    const [isHovered, setIsHovered] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden mb-36">

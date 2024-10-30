@@ -1,9 +1,9 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Button from "./Button";
-import { motion } from "framer-motion";
 
 const RealTimeApplicantAnalytics = () => {
-    const [isHovered, setIsHovered] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
 
     const imageVariants = {
         hidden: { opacity: 0, x: -50 },
