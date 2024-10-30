@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import {
     FaBullseye,
@@ -47,19 +48,31 @@ const features = [
     },
 ];
 
+const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 export default function IncludedCards() {
     return (
         <div className="bg-white py-12">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
                     {features.map((feature, index) => (
-                        <div key={index} className="text-center space-y-4">
+                        <motion.div
+                            key={index}
+                            className="text-center space-y-4"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={cardVariants}
+                        >
                             <div className="flex items-center justify-center w-16 h-16 bg-blue-500 rounded-full mx-auto">
                                 {feature.icon}
                             </div>
                             <h3 className="card-head">{feature.title}</h3>
                             <p className="card-para">{feature.description}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

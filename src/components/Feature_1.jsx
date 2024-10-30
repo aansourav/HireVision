@@ -1,11 +1,29 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Button from "./Button";
 
 const Feature_1 = () => {
     const [isHovered, setIsHovered] = useState(true);
+
+    const textVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+    };
+
+    const imageVariants = {
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+    };
+
     return (
         <div className="max-w-7xl flex justify-between items-center p-8 py-20 bg-white mx-auto">
-            <div className="w-1/2 pr-8">
+            <motion.div
+                className="w-1/2 pr-8"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={textVariants}
+            >
                 <span className="inline-block px-3 py-1 bg-[#eef1f2] rounded-full my-8">
                     <span className="text-xs font-beVietnam font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                         FEATURE
@@ -24,10 +42,16 @@ const Feature_1 = () => {
                     setIsHovered={setIsHovered}
                     text="Request Demo"
                 />
-            </div>
-            <div className="w-1/2">
-                <img src="/feature_1.png" alt="" />
-            </div>
+            </motion.div>
+            <motion.div
+                className="w-1/2"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={imageVariants}
+            >
+                <img src="/feature_1.png" alt="Feature illustration" />
+            </motion.div>
         </div>
     );
 };

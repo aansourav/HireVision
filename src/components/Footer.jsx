@@ -89,7 +89,7 @@ const Footer = () => {
                 {/* Bottom Section */}
                 <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-sm text-gray-400">
-                        Hirevision • Copyright © 2023
+                        Hirevision • Copyright © 2024
                     </p>
                     <div className="mt-4 sm:mt-0">
                         <a
