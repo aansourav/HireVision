@@ -9,23 +9,40 @@ export default function Brands() {
     const containerRef = useRef(null);
     const timelineRef = useRef(null);
 
+    const logos = [
+        "/brand-logo/1.png",
+        "/brand-logo/2.png",
+        "/brand-logo/3.png",
+        "/brand-logo/4.png",
+        "/brand-logo/5.png",
+        "/brand-logo/6.png",
+        "/brand-logo/7.png",
+        "/brand-logo/8.png",
+    ];
+
     useEffect(() => {
         const slider = sliderRef.current;
-        const container = containerRef.current;
         const logos = slider.querySelectorAll(".logo");
         const totalWidth = logos.length * (logos[0].offsetWidth + 40); // 40px for margin
 
+        // Duplicate logos to create a seamless loop
+        slider.appendChild(slider.cloneNode(true));
+
         gsap.set(logos, { opacity: 0.1 });
 
-        timelineRef.current = gsap.timeline({ repeat: -1 }).to(logos, {
-            x: `-=${totalWidth}`,
-            duration: 20,
-            ease: "none",
-            modifiers: {
-                x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
-            },
-        });
+        timelineRef.current = gsap
+            .timeline({
+                repeat: -1,
+                defaults: { duration: 30, ease: "none" },
+            })
+            .to(slider, {
+                x: `-=${totalWidth}`,
+                modifiers: {
+                    x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+                },
+            });
 
+        // ScrollTrigger for fade-in effect
         logos.forEach((logo) => {
             gsap.to(logo, {
                 opacity: 1,
@@ -34,7 +51,7 @@ export default function Brands() {
                     trigger: logo,
                     start: "left right",
                     end: "right left",
-                    scroller: container,
+                    scroller: containerRef.current,
                     scrub: true,
                 },
             });
@@ -66,14 +83,12 @@ export default function Brands() {
                 onMouseLeave={handleMouseLeave}
             >
                 <div ref={sliderRef} className="flex space-x-10">
-                    {[...Array(16)].map((_, index) => (
+                    {logos.map((logo, index) => (
                         <div key={index} className="logo flex-shrink-0">
                             <img
-                                src={`https://picsum.photos/200/100?random=${
-                                    index % 8
-                                }`}
+                                src={logo}
                                 alt={`Brand logo ${index + 1}`}
-                                className="w-40 h-20 object-contain"
+                                className="w-40 h-20 object-contain filter grayscale" // Apply grayscale filter for black-and-white effect
                             />
                         </div>
                     ))}
